@@ -39,6 +39,7 @@ Route::get('/product', [ProductController::class, 'index']);
 
 
 
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -51,4 +52,29 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::resource('property', \App\Http\Controllers\PropertyController::class);
+
+//     Route::resource('users', \App\Http\Controllers\UsersController::class);
+// });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/property', function () 
+    {
+        return view('property');
+    })->name('property');
+    Route::get('/property', function () 
+    {
+        return view('property');
+    })->name('property');
+    Route::get('/property', function () 
+    {
+        return view('property');
+    })->name('property');
 });
