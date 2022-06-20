@@ -14,6 +14,15 @@ use App\Http\Controllers\Frontend\RentController;
 use App\Http\Controllers\Frontend\SellController;
 use App\Http\Controllers\Frontend\SignupController;
 use App\Http\Controllers\Frontend\TermsController;
+
+// use App\Http\Controllers\DashboardController;
+// use App\Http\Controllers\PropertyController;
+// use App\Http\Controllers\UsersController;
+
+use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\PropertyController;
+use App\Http\Controllers\Backend\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,12 +40,9 @@ Route::get('/rent', [RentController::class, 'index']);
 Route::get('/sell', [SellController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/contact', [ContactController::class, 'index']);
-// Route::get('/signup', [SignupController::class, 'index']);
-// Route::get('/login', [LoginController::class, 'index']);
 Route::get('/policy', [PolicyController::class, 'index']);
 Route::get('/terms', [TermsController::class, 'index']);
 Route::get('/product', [ProductController::class, 'index']);
-
 
 
 
@@ -49,32 +55,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+        // Route::get('/dashboard', function () {
+    //         return view('dashboard');
+    //     })->name('dashboard');
 
-// Route::group(['middleware' => 'auth'], function () {
-//     Route::resource('property', \App\Http\Controllers\PropertyController::class);
-
-//     Route::resource('users', \App\Http\Controllers\UsersController::class);
-// });
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/property', function () 
-    {
-        return view('property');
-    })->name('property');
-    Route::get('/property', function () 
-    {
-        return view('property');
-    })->name('property');
-    Route::get('/property', function () 
-    {
-        return view('property');
-    })->name('property');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/property', [PropertyController::class, 'index'])->name('property');
+    Route::get('/user', [UserController::class, 'index'])->name('user');
 });
