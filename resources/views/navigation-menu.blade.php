@@ -4,11 +4,11 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                {{-- <div class="shrink-0 flex items-center">
-                    <a href="{{url('dashboard')}}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                <div class="shrink-0 flex items-center">
+                    <a href="{{url('dashboard')}}" style="font-weight: 900; font-size: 1.5rem">
+                        Realesto
                     </a>
-                </div> --}}
+                </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -149,6 +149,16 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('property') }}" :active="request()->routeIs('property')">
+                {{ __('Property') }}
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('user') }}" :active="request()->routeIs('user')">
+                {{ __('User') }}
             </x-jet-responsive-nav-link>
         </div>
 
