@@ -5,18 +5,23 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{url('dashboard')}}" style="font-weight: 900; font-size: 1.5rem">
+                    <a href="{{url('/admin')}}" style="font-weight: 900; font-size: 1.5rem">
                         Realesto
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{url('/dashboard')}}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                </div>
+                </div> --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{url('/post')}}" :active="request()->routeIs('post')">
+                        {{ __('Post') }}
+                    </x-jet-nav-link>
+                </div>
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{url('/property')}}" :active="request()->routeIs('property')">
                         {{ __('Property') }}
                     </x-jet-nav-link>
@@ -25,7 +30,7 @@
                     <x-jet-nav-link href="{{url('/user')}}" :active="request()->routeIs('user')">
                         {{ __('User') }}
                     </x-jet-nav-link>
-                </div>
+                </div> --}}
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -152,15 +157,15 @@
             </x-jet-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('property') }}" :active="request()->routeIs('property')">
-                {{ __('Property') }}
+            <x-jet-responsive-nav-link href="{{url('/post')}}" :active="request()->routeIs('post')">
+                {{ __('Post') }}
             </x-jet-responsive-nav-link>
         </div>
-        <div class="pt-2 pb-3 space-y-1">
+        {{-- <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('user') }}" :active="request()->routeIs('user')">
                 {{ __('User') }}
             </x-jet-responsive-nav-link>
-        </div>
+        </div> --}}
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

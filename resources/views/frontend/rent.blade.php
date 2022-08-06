@@ -20,7 +20,7 @@
                 <img src="{{url('frontend/image/feature1.jpg')}}">
                 <div class="featured_listing_card_info">
                 	<div class="property_title">
-                		<a href="{{url('/product')}}">Sea Breeze</a>
+                		<a href="{{url('/rent/product')}}">Sea Breeze</a>
                 		<h2>$150,000</h2>
                 	</div>
                     <p>House for families, Luxuary</p>
@@ -37,7 +37,7 @@
                 <img src="{{url('frontend/image/feature8.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                		<a href="{{url('/product')}}">Vista</a>
+                		<a href="{{url('/rent/product')}}">Vista</a>
                 		<h2>$550,000</h2>
                 	</div>
                     <p>luxury, penthouse</p>
@@ -54,7 +54,7 @@
                 <img src="{{url('frontend/image/feature3.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                		<a href="{{url('/product')}}">Sunrise</a>
+                		<a href="{{url('/rent/product')}}">Sunrise</a>
                 		<h2>$125,000</h2>
                 	</div>
                     <p>luxury, penthouse</p>
@@ -71,7 +71,7 @@
                 <img src="{{url('frontend/image/feature4.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                		<a href="{{url('/product')}}">Paradise</a>
+                		<a href="{{url('/rent/product')}}">Paradise</a>
                 		<h2>$750,000</h2>
                 	</div>
                     <p>House for families, Luxuary</p>
@@ -88,7 +88,7 @@
                 <img src="{{url('frontend/image/feature5.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                		<a href="{{url('/product')}}">White Queen</a>
+                		<a href="{{url('/rent/product')}}">White Queen</a>
                 		<h2>$1,000,000</h2>
                 	</div>
                     <p>luxury, penthouse</p>
@@ -105,7 +105,7 @@
                 <img src="{{url('frontend/image/feature6.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                		<a href="{{url('/product')}}">Monterey</a>
+                		<a href="{{url('/rent/product')}}">Monterey</a>
                 		<h2>$175,000</h2>
                 	</div>
                     <p>House for families, Luxuary</p>
@@ -122,7 +122,7 @@
                 <img src="{{url('frontend/image/feature8.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                        <a href="{{url('/product')}}">Vista</a>
+                        <a href="{{url('/rent/product')}}">Vista</a>
                         <h2>$550,000</h2>
                     </div>
                     <p>luxury, penthouse</p>
@@ -139,7 +139,7 @@
                 <img src="{{url('frontend/image/feature1.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                        <a href="{{url('/product')}}">Sea Breeze</a>
+                        <a href="{{url('/rent/product')}}">Sea Breeze</a>
                         <h2>$150,000</h2>
                     </div>
                     <p>House for families, Luxuary</p>
@@ -156,7 +156,7 @@
                 <img src="{{url('frontend/image/feature6.jpg')}}">
                 <div class="featured_listing_card_info">
                     <div class="property_title">
-                        <a href="{{url('/product')}}">Monterey</a>
+                        <a href="{{url('/rent/product')}}">Monterey</a>
                         <h2>$175,000</h2>
                     </div>
                     <p>House for families, Luxuary</p>

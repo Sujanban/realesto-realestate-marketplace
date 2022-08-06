@@ -61,111 +61,27 @@
     <div class="featured_listing">
         <h1>Our Featured Listings</h1>
         <div class="card">
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature1.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Sea Breeze</a>
-                        <h2>$150,000</h2>
+            @foreach ($posts as $post)
+                <div class="featured_listing_card">
+                    <div class="listing_card_image">
+                        <a href="/property/{{ $post->slug }}">
+                            <img src="{{ asset('cover/' . $post->cover) }}">
+                        </a>
                     </div>
-                    <p>House for families, Luxuary</p>
-                    <p>Area: 76.87</p>
-                    <hr>
-                    <p>Beds: 3   Baths: 3   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature8.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Vista</a>
-                        <h2>$550,000</h2>
+                    <div class="featured_listing_card_info">
+                        <div class="property_title">
+                            <a href="/property/{{ $post->slug }}">Sea Breeze</a>
+                            <h2>$150,000</h2>
+                        </div>
+                        <p>House for families, Luxuary</p>
+                        <p>Area: 76.87</p>
+                        <p>Beds: {{ $post->bedroom }} Baths: {{ $post->washroom }} Garages: {{ $post->garage }}</p>
                     </div>
-                    <p>luxury, penthouse</p>
-                    <p>Area: 52.68</p>
-                    <hr>
-                    <p>Beds: 2   Baths: 2   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
                 </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature3.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Sunrise</a>
-                        <h2>$125,000</h2>
-                    </div>
-                    <p>luxury, penthouse</p>
-                    <p>Area: 124.89</p>
-                    <hr>
-                    <p>Beds: 4   Baths: 4   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature4.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Paradise</a>
-                        <h2>$750,000</h2>
-                    </div>
-                    <p>House for families, Luxuary</p>
-                    <p>Area: 76.87</p>
-                    <hr>
-                    <p>Beds: 3   Baths: 3   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature5.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">White Queen</a>
-                        <h2>$1,000,000</h2>
-                    </div>
-                    <p>luxury, penthouse</p>
-                    <p>Area: 76.87</p>
-                    <hr>
-                    <p>Beds: 3   Baths: 3   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature6.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Monterey</a>
-                        <h2>$175,000</h2>
-                    </div>
-                    <p>House for families, Luxuary</p>
-                    <p>Area: 76.87</p>
-                    <hr>
-                    <p>Beds: 3   Baths: 3   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="featured_btn ">
-            <a href="{{url('/buy')}}" class="btn">Read More</a>
+            <a href="{{ url('/buy') }}" class="btn">Read More</a>
         </div>
     </div>
 
@@ -174,76 +90,42 @@
     <!-- -----------------------------------------rental banner section starts here---------------------------------- -->
     <div class="rental_banner">
         <div class="rental_banner_img">
-            <img src="{{url('frontend/image/heroimg.jpg')}}">
+            <img src="{{ url('frontend/image/heroimg.jpg') }}">
         </div>
         <div class="rental_banner_info">
-            <h1>Stunning Luxury Rental Apartments</h1>
-            <p>Luxury Apartments</p>
-            <p>The property features many things that will suit any family: local community, schools and daycares. Get
-                surrounded by the stunning views opening around and enjoy relaxed atmosphere of the place. At your
-                disposal is a fantastic garden at the backyard of the house.</p>
-            <a href="{{url('/rent')}}" class="btn">View More</a>
+            <h1>Want to List Your Propery</h1>
+            <p>follow me</p>
+            <p>Click on the button below and you will be redirected to our sell section. Follow the simple steps and you
+                will be able to sell your properties in a second without any fees and commission.</p>
+            <a href="{{ url('/sell') }}" class="btn">Start!</a>
         </div>
     </div>
     <!-- -----------------------------------------rental banner section ends here---------------------------------- -->
- <!-- -----------------------------------------rent property section starts here---------------------------------- -->
+    <!-- -----------------------------------------rent property section starts here---------------------------------- -->
     <div class="featured_listing">
-        <h1>Properties For Rent</h1>
+        <h1>Other Properties</h1>
         <div class="card">
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature8.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Vista</a>
-                        <h2>$550,000</h2>
+            @foreach ($posts as $post)
+                <div class="featured_listing_card">
+                    <div class="listing_card_image">
+                        <a href="/property/{{ $post->slug }}">
+                            <img src="{{ asset('cover/' . $post->cover) }}">
+                        </a>
                     </div>
-                    <p>luxury, penthouse</p>
-                    <p>Area: 52.68</p>
-                    <hr>
-                    <p>Beds: 2   Baths: 2   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature1.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Sea Breeze</a>
-                        <h2>$150,000</h2>
+                    <div class="featured_listing_card_info">
+                        <div class="property_title">
+                            <a href="/post/{{ $post->slug }}">Sea Breeze</a>
+                            <h2>$150,000</h2>
+                        </div>
+                        <p>House for families, Luxuary</p>
+                        <p>Area: 76.87</p>
+                        <p>Beds: {{ $post->bedroom }} Baths: {{ $post->washroom }} Garages: {{ $post->garage }}</p>
                     </div>
-                    <p>House for families, Luxuary</p>
-                    <p>Area: 76.87</p>
-                    <hr>
-                    <p>Beds: 3   Baths: 3   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
                 </div>
-            </div>
-            <div class="featured_listing_card">
-                <img src="{{url('frontend/image/feature6.jpg')}}">
-                <div class="featured_listing_card_info">
-                    <div class="property_title">
-                        <a href="{{url('/product')}}">Monterey</a>
-                        <h2>$175,000</h2>
-                    </div>
-                    <p>House for families, Luxuary</p>
-                    <p>Area: 76.87</p>
-                    <hr>
-                    <p>Beds: 3   Baths: 3   Garages: 1</p>
-                    <hr>
-                    <p>825 Casanova Ave, Monterey, CABeverly Hills</p>
-                    <hr>
-                    <p>Agent:Added: 24.04.19</p>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="featured_btn ">
-            <a href="{{url('/rent')}}" class="btn">Read More</a>
+            <a href="{{ url('/buy') }}" class="btn">Read More</a>
         </div>
     </div>
 

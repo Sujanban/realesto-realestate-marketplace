@@ -14,11 +14,13 @@
     border: none;
     transition: all .2s linear;
 }
-
 a {
     font-size: 1rem;
 }
-
+hr{
+    height: 1.5px;
+    background-color: black;
+}
 .btn {
     padding: 0.75rem 1.5rem;
     border-radius: 3rem;
@@ -280,9 +282,24 @@ header .icons #menu-bars {
 .featured_listing .featured_listing_card{
     width: 100%;
 }
+.featured_listing .featured_listing_card .listing_card_image{
+    height: 275px;
+    background-size: cover;
+    background: center;
+    background-position: center;
+}
+
+.featured_listing .featured_listing_card .listing_card_image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
 
 .featured_listing .featured_listing_card img{
     width: 100%;
+    /* height: 100%; */
     border-radius: 6px;
 }
 .featured_listing .featured_listing_card .featured_listing_card_info{
@@ -290,10 +307,7 @@ header .icons #menu-bars {
     text-align: left;
     padding: 0.5rem;
 }
-.featured_listing .featured_listing_card .featured_listing_card_info .property_title{
-    display: flex;
-    justify-content: space-between;
-}
+
 .featured_listing .featured_listing_card .featured_listing_card_info p{
     padding-bottom: 0.4rem;
     border-bottom: 1px solid black;
@@ -1306,10 +1320,74 @@ header .icons #menu-bars {
 .sell_wraper .sell_info h1{
     padding: 1rem;
 }
+.sell_form {
+    /*padding: 5rem 0%;*/
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(233, 234, 242);;
+}
+.sell_form .edit_form_image{
+    padding-top: 5rem!important;
+}
+.sell_form .edit_form_image form{
+    padding: 0rem 0%!important;
+    padding-left: 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sell_form form{
+    padding: 5rem 0%;
+    padding-left: 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sell_form div{
+    padding: 0.5rem;
+}
+.sell_form form input{
+    background-color: whitesmoke;
+    border-radius: 3rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.25rem 0rem;
+}
+.sell_form form .property_item_quantity{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-
-
-
+.sell_form .sell_form_image{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgba(1, 4, 42, 0.3), rgba(0, 0, 0, 0.5)), url(/frontend/image/public_speak.jpg);
+    background-position: center;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.sell_form .edit_form_image{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.sell_form .sell_form_image h2{
+    color: white;
+}
+.sell_form .sell_form_image img{
+    width: 100%;
+}
+.sell_form .submit{
+    color: white;
+    font-family: 2rem;
+    font-weight: 900;
+    background-color: royalblue;
+    cursor: pointer;
+}
 
 
 /*************************************Sell Page starts here********************************/
@@ -1398,4 +1476,16 @@ header .icons #menu-bars {
 }
 .e404_info p{
     padding: 1rem;
+}
+
+
+/* *********************************policy page*********************************** */
+.policy_page, .terms{
+    padding: 8rem 7%;
+}
+.policy_page h2{
+    padding: 2rem 0rem;
+}
+.terms h2{
+    padding: 2rem 0rem;
 }

@@ -10,4 +10,7 @@ class TermsController extends Controller
     public function index(){
         return view('frontend.terms');
     }
+    public function logged(){
+        return view('logged.terms');
+    }
 }

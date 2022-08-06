@@ -13,7 +13,7 @@
                         <a href="{{url('/')}}">Home</a>
                         <a href="{{url('/buy')}}">Buy</a>
                         <a href="{{url('/sell')}}">Sell</a>
-                        <a href="{{url('/rent')}}">Rent</a>
+                        {{-- <a href="{{url('/rent')}}">Rent</a> --}}
                     </div>
                     <div>
                         <a href="{{url('/about')}}">About Us</a>

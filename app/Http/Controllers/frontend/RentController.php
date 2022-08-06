@@ -10,4 +10,7 @@ class RentController extends Controller
     public function index(){
         return view('frontend.rent');
     }
+    public function logged(){
+        return view('logged.rent');
+    }
 }
