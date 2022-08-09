@@ -32,60 +32,73 @@
         </div>
     </div>
     <div class="sell_form">
-        <form>
+        <form action="/userstore" method="post" enctype="multipart/form-data">
+            @csrf
             <div>
                 <div class="sell_form_item">
                     <label>Property Title</label><br>
-                    <input type="text" name="property_title" placeholder="Enter your Property Title">
+                    <input type="text" name="title" placeholder="Enter your Property Title" required>
+                </div>
+                <div>
+                    <label>Owner Name</label><br>
+                    <input type="text" name="author" placeholder="Enter Owner Name" required>
                 </div>
                 <div>
                     <label>Create Slug</label><br>
-                    <input type="text" name="property_title" placeholder="Enter words Separated by '-' Sign">
+                    <input type="text" name="slug" placeholder="Enter words Separated by '-' Sign" required>
+                </div>
+                <div>
+                    <label>Location</label><br>
+                    <input type="text" name="location" placeholder="Enter Property Location" required>
                 </div>
                 <div>
                     <label>Price</label><br>
-                    <input type="text" name="property_title" placeholder="Enter Property price">
+                    <input type="text" name="price" placeholder="Enter Property price" required>
                 </div>
                 <div>
                     <label>Area</label><br>
-                    <input type="text" name="property_title" placeholder="Enter Property Area">
+                    <input type="text" name="area" placeholder="Enter Property Area" required>
                 </div>
                 <div>
                     <label>Property Discription</label><br>
-                    <input type="text" name="property_title" placeholder="Enter your Property Title">
+                    <input type="text" name="body" placeholder="Enter your Property Title" required>
                 </div>
             </div>
 
             <div>
                 <div>
                     <label>Property Features</label><br>
-                    <input type="text" name="property_title" placeholder="Enter your Property features">
+                    <input type="text" name="feature" placeholder="Enter your Property features" required>
                 </div>
                 <div class="property_item_quantity">
                     <div>
                         <label>Number of Bedroom</label><br>
-                        <input type="number" name="property_title" placeholder="Enter Number">
+                        <input type="number" name="bedroom" placeholder="Enter Number" required>
                     </div>
                     <div>
                         <label>Number of Washroom</label><br>
-                        <input type="number" name="property_title" placeholder="Enter Number">
+                        <input type="number" name="washroom" placeholder="Enter Number" required>
                     </div>
                     <div>
                         <label>Number of kitchen</label><br>
-                        <input type="number" name="property_title" placeholder="Enter Number">
+                        <input type="number" name="kitchen" placeholder="Enter Number" required>
                     </div>
                     <div>
                         <label>Number of Garage</label><br>
-                        <input type="number" name="property_title" placeholder="Enter Number">
+                        <input type="number" name="garage" placeholder="Enter Number" required>
+                    </div>
+                    <div>
+                        <label>Contact</label><br>
+                        <input type="number" name="contact" placeholder="Enter Contact Details" required>
                     </div>
                 </div>
                 <div>
                     <label>Cover Image</label><br>
-                    <input type="file" name="cover_image">
+                    <input type="file" name="cover" required>
                 </div>
                 <div>
                     <label>Other Images</label><br>
-                    <input type="file" name="other_image">
+                    <input type="file" name="images[]" required>
                 </div>
             </div>
 

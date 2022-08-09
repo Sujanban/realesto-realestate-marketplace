@@ -21,22 +21,15 @@
     </div>
     @foreach ($posts as $post)
         <div class="product_info">
-            {{-- <h2>Sophisticated Two Bedroom plus Study in Luxurious One30 Hyde Park</h2> --}}
             <h2>{{ $post->title }}</h2>
-            <br>
-            <h3>Location: </h3>
-            <p>{{ $post->location }}</p><br>
+            <h3>Posted By: <i>{{ $post->author }}</i></h3>
+            <h3>Location: <i>{{ $post->location }}</i></h3>
+            <h3>Area: <i>{{ $post->area }}</i> </h3>
+            <h3>Price: <i>{{ $post->price }}</i> </h3>
+            <h3>About Property</h3>
             <p>{{ $post->body }}</p>
-
             <h3>Defining Features</h3>
             <li>{{ $post->feature }}</li>
-            {{-- <li>Spacious open plan living/dining drenched in northern light</li>
-		<li>Glass encased interiors showcasing sweeping Harbour & city views</li>
-		<li>Spacious open plan living/dining drenched in northern light</li>
-		<li>Glass encased interiors showcasing sweeping Harbour & city views</li>
-		<li>Spacious open plan living/dining drenched in northern light</li>
-		<li>Glass encased interiors showcasing sweeping Harbour & city views</li>
-		<li>Spacious open plan living/dining drenched in northern light</li> --}}
             <br><br>
             <p>
                 Disclaimer: All information contained herewith, have been obtained from sources we believe to be reliable;

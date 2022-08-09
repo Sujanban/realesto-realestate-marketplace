@@ -4,8 +4,8 @@
     <div class="hero">
         <div class="hero-info">
             <h1>Discover Your Real Estate</h1>
-            <form>
-                <input class="search" type="search" placeholder="Search Location, Appartments, Complex etc"
+            <form action="/search">
+                <input class="search" name="query" type="text" placeholder="Search By Title or Location"
                     aria-label="Search">
                 <i><button class="btn" type="submit">Search</button></i>
             </form>
@@ -70,11 +70,11 @@
                     </div>
                     <div class="featured_listing_card_info">
                         <div class="property_title">
-                            <a href="/property/{{ $post->slug }}">Sea Breeze</a>
-                            <h2>$150,000</h2>
+                            <a href="/property/{{ $post->slug }}">{{ $post->title }}</a>
+                            <h3>Price: ${{ $post->price }}</h3>
                         </div>
-                        <p>House for families, Luxuary</p>
-                        <p>Area: 76.87</p>
+                        <p>House for family</p>
+                        <p>Area: {{ $post->area }}</p>
                         <p>Beds: {{ $post->bedroom }} Baths: {{ $post->washroom }} Garages: {{ $post->garage }}</p>
                     </div>
                 </div>
@@ -114,11 +114,11 @@
                     </div>
                     <div class="featured_listing_card_info">
                         <div class="property_title">
-                            <a href="/post/{{ $post->slug }}">Sea Breeze</a>
-                            <h2>$150,000</h2>
+                            <a href="/property/{{ $post->slug }}">{{ $post->title }}</a>
+                            <h3>Price: ${{ $post->price }}</h3>
                         </div>
-                        <p>House for families, Luxuary</p>
-                        <p>Area: 76.87</p>
+                        <p>House for family</p>
+                        <p>Area: {{ $post->area }}</p>
                         <p>Beds: {{ $post->bedroom }} Baths: {{ $post->washroom }} Garages: {{ $post->garage }}</p>
                     </div>
                 </div>

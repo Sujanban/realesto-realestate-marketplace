@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             // $table->string("author");
             $table->string("title");
+            $table->string("author");
             $table->string("slug");
             $table->string("location");
             $table->string("price");

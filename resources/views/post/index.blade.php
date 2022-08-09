@@ -24,23 +24,17 @@
     <div class="container" style="margin-top: 50px;">
         <div class="">
             <a href="/post/create" class="btn btn-outline-dark">Create Post</a>
-            {{-- <form class="col-9" action="">
-                <div class="form-group">
-                    <input type="search" name="search" class="form-control" placeholder="Search By Title" value="{{$search}}" />
-                </div>
-                <button class="btn btn-primary">Search</button>
-            </form> --}}
         </div>
         <table class="table">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Title</th>
+                    <th>Author</th>
                     {{-- <th>Slug</th> --}}
-                    <th>Location</th>
+                    {{-- <th>Location</th> --}}
                     <th>Price</th>
                     <th>Area</th>
-                    {{-- <th>Author</th> --}}
                     {{-- <th>Description</th> --}}
                     {{-- <th>Feature</th> --}}
                     <th>Bedroom</th>
@@ -54,17 +48,15 @@
                 </tr>
             </thead>
             <tbody>
-
-
                 @foreach ($posts as $post)
                     <tr>
                         <th scope="row">{{ $post->id }}</th>
                         <td>{{ $post->title }}</td>
+                        <td>{{ $post->author }}</td>
                         {{-- <td>{{ $post->slug }}</td> --}}
-                        <td>{{ $post->location }}</td>
+                        {{-- <td>{{ $post->location }}</td> --}}
                         <td>{{ $post->price }}</td>
                         <td>{{ $post->area }}</td>
-                        {{-- <td>{{ $post->author }}</td> --}}
                         {{-- <td>{{ $post->body }}</td> --}}
                         {{-- <td>{{ $post->feature }}</td> --}}
                         <td>{{ $post->bedroom }}</td>
@@ -83,17 +75,11 @@
                                 @method('delete')
                             </form>
                         </td>
-
                     </tr>
                 @endforeach
-
             </tbody>
         </table>
     </div>
-
-
-
-
 </body>
 
 </html>

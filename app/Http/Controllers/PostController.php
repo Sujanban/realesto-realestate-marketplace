@@ -9,17 +9,80 @@ use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
+
+
+
+
+    public function userstore(Request $request)
+    {
+        if($request->hasFile("cover")){
+            $file=$request->file("cover");
+            $imageName=time().'_'.$file->getClientOriginalName();
+            $file->move(\public_path("cover/"),$imageName);
+
+            $post =new Post([
+                "title" =>$request->title,
+                "slug" =>$request->slug,
+                "author" =>$request->author,
+                "location" =>$request->location,
+                "price" =>$request->price,
+                "area" =>$request->area,
+                "body" =>$request->body,
+                "bedroom" =>$request->bedroom,
+                "washroom" =>$request->washroom,
+                "kitchen" =>$request->kitchen,
+                "garage" =>$request->garage,
+                "feature" =>$request->feature,
+                "contact" =>$request->contact,
+                "cover" =>$imageName,
+            ]);
+           $post->save();
+        }
+
+            if($request->hasFile("images")){
+                $files=$request->file("images");
+                foreach($files as $file){
+                    $imageName=time().'_'.$file->getClientOriginalName();
+                    $request['post_id']=$post->id;
+                    $request['image']=$imageName;
+                    $file->move(\public_path("/images"),$imageName);
+                    Image::create($request->all());
+
+                }
+            }
+
+            return redirect("/sell");
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function search(Request $req)
+    {
+        $data = Post::where('title', 'like' , '%'.$req->input('query').'%')->orWhere('location', 'like' , '%'.$req->input('query').'%')
+        ->get();
+        return view('search',['posts'=>$data]);
+    }
+
+
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     $posts=Post::all();
-    //     $data= compact('posts');
-    //     return view('post.index')->with($data);
-    // }
+   
 
 
     public function index(Request $request)
@@ -79,7 +142,7 @@ class PostController extends Controller
             $post =new Post([
                 "title" =>$request->title,
                 "slug" =>$request->slug,
-                // "author" =>$request->author,
+                "author" =>$request->author,
                 "location" =>$request->location,
                 "price" =>$request->price,
                 "area" =>$request->area,
@@ -161,7 +224,7 @@ class PostController extends Controller
             // "cover"=>$post->cover,
             "title" =>$request->title,
             'slug' =>$request->slug,
-            // "author" =>$request->author,
+            "author" =>$request->author,
             "location" =>$request->location,
             "price" =>$request->price,
             "area" =>$request->area,

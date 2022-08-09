@@ -14,10 +14,4 @@ class HomeController extends Controller
         $posts=Post::all()->take(3);
         return view('frontend.index')->with('posts',$posts);
     }
-
-    
-    public function logged(){
-        $posts=Post::all()->take(3);
-        return view('logged.index')->with('posts',$posts);
-    }
 }

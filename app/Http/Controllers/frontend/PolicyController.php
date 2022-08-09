@@ -10,8 +10,4 @@ class PolicyController extends Controller
     public function index(){
         return view('frontend.policy');
     }
-
-    public function logged(){
-        return view('logged.policy');
-    }
 }

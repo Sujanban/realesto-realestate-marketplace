@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{url('/admin')}}" style="font-weight: 900; font-size: 1.5rem">
+                    <a href="{{url('/')}}" style="font-weight: 900; font-size: 1.5rem">
                         Realesto
                     </a>
                 </div>
@@ -21,6 +21,7 @@
                         {{ __('Post') }}
                     </x-jet-nav-link>
                 </div>
+                
                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{url('/property')}}" :active="request()->routeIs('property')">
                         {{ __('Property') }}

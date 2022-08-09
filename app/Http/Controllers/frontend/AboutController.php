@@ -10,7 +10,4 @@ class AboutController extends Controller
     public function index(){
         return view('frontend.about');
     }
-    public function logged(){
-        return view('logged.about');
-    }
 }

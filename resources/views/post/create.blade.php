@@ -27,6 +27,10 @@
                         <input type="text" name="title" placeholder="Enter your Property Title" required>
                     </div>
                     <div>
+                        <label>Owner Name</label><br>
+                        <input type="text" name="author" placeholder="Enter Owner Name" required>
+                    </div>
+                    <div>
                         <label>Create Slug</label><br>
                         <input type="text" name="slug" placeholder="Enter words Separated by '-' Sign" required>
                     </div>
@@ -92,44 +96,6 @@
                 <h2>Please,<br>Fill the Form Aside</h2>
             </div>
         </div>
-
-        {{-- <div class="container" style="margin-top: 50px;">
-            <div class="row">
-
-
-                <div class="col-lg-3"></div>
-                <div class="col-lg-6">
-                    <h3 class="text-center text-dark"><b>Add Post</b> </h3>
-				    <div class="form-group">
-                        <form action="/post" method="post" enctype="multipart/form-data">
-                         @csrf
-        				 <input type="text" name="title" class="form-control m-3" placeholder="Place your Title Here" required>
-                         <input type="text" name="slug" class="form-control m-3" placeholder="Place slug" required> --}}
-        				 {{-- <input type="text" name="author" class="form-control m-3" placeholder="author" required> --}}
-                         {{-- <input type="text" name="location" class="form-control m-3" placeholder="Enter Your Property Location" required>
-                         <input type="text" name="price" class="form-control m-3" placeholder="Set Price" required>
-                         <input type="text" name="area" class="form-control m-3" placeholder="Area Occupied by your Property" required>
-                         <Textarea name="body" cols="30" rows="6" class="form-control m-3" placeholder="Property Discription" required></Textarea>
-                         <Textarea name="feature" cols="30" rows="6" class="form-control m-3" placeholder="Your Property Features" required></Textarea>
-                         <input type="text" name="bedroom" class="form-control m-3" placeholder="Number of Bedroom" required>
-                         <input type="text" name="washroom" class="form-control m-3" placeholder="Number of Washroom" required>
-                         <input type="text" name="kitchen" class="form-control m-3" placeholder="Number of Kitchen" required>
-                         <input type="text" name="garage" class="form-control m-3" placeholder="Number of Garage" required>
-                         <input type="text" name="contact" class="form-control m-3" placeholder="Contact Number" required>
-                         <label class="m-3">Cover Image</label>
-                         <input type="file" id="input-file-now-custom-3" class="form-control m-3" name="cover" required>
-
-                         <label class="m-3">Images</label>
-                         <input type="file" id="input-file-now-custom-3" class="form-control m-3" name="images[]" multiple required>
-
-                        <button type="submit" class="btn btn-dark mt-3 ">Submit</button>
-                        </form>
-                   </div>
-                </div>
-            </div> --}}
-
-
-
          </body>
 </html>
 
