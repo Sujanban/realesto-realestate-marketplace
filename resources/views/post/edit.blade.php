@@ -22,7 +22,7 @@
     </div>
     <div class="sell_form edit_form">
         <div class="form-group">
-            <form action="/update/{{ $posts->id }}" method="post" enctype="multipart/form-data">
+            <form action="/update/{{ $posts->id }}" method="post" enctype="multipart/form-data"  autocomplete="off" >
                 @csrf
                 @method('put')
                 <div>
@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <label>Price</label><br>
-                        <input type="text" name="price" placeholder="Enter Property price"
+                        <input type="number" name="price" placeholder="Enter Property price"
                             value="{{ $posts->price }}" required>
                     </div>
                     <div>
@@ -98,11 +98,11 @@
                     </div>
                     <div>
                         <label>Cover Image</label><br>
-                        <input type="file" name="cover">
+                        <input type="file" name="cover" accept="image/*">
                     </div>
                     <div>
                         <label>Other Images</label><br>
-                        <input type="file" name="images[]" multiple>
+                        <input type="file" name="images[]" accept="image/*" multiple>
                     </div>
                 </div>
 

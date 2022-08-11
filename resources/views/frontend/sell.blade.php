@@ -32,12 +32,12 @@
         </div>
     </div>
     <div class="sell_form">
-        <form action="/userstore" method="post" enctype="multipart/form-data">
+        <form name="form" action="/userstore" method="post" enctype="multipart/form-data" onsubmit="return validate()"  autocomplete="off" >
             @csrf
             <div>
                 <div class="sell_form_item">
                     <label>Property Title</label><br>
-                    <input type="text" name="title" placeholder="Enter your Property Title" required>
+                    <input type="text" name="title" id="title" placeholder="Enter your Property Title" required>
                 </div>
                 <div>
                     <label>Owner Name</label><br>
@@ -53,7 +53,7 @@
                 </div>
                 <div>
                     <label>Price</label><br>
-                    <input type="text" name="price" placeholder="Enter Property price" required>
+                    <input type="number" name="price" placeholder="Enter Property price" required>
                 </div>
                 <div>
                     <label>Area</label><br>
@@ -94,11 +94,11 @@
                 </div>
                 <div>
                     <label>Cover Image</label><br>
-                    <input type="file" name="cover" required>
+                    <input type="file" name="cover" accept="image/*" required>
                 </div>
                 <div>
                     <label>Other Images</label><br>
-                    <input type="file" name="images[]" required>
+                    <input type="file" name="images[]" accept="image/*" required>
                 </div>
             </div>
 

@@ -134,6 +134,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'cover' => 'required|mimes:png,jpg,jpeg|max:2048'
+        ]);
         if($request->hasFile("cover")){
             $file=$request->file("cover");
             $imageName=time().'_'.$file->getClientOriginalName();

@@ -1489,3 +1489,14 @@ header .icons #menu-bars {
 .terms h2{
     padding: 2rem 0rem;
 }
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+

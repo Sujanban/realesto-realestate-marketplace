@@ -19,12 +19,12 @@
             <a href="/post" class="btn btn-dark">Back</a>
         </div>
         <div class="sell_form">
-            <form action="/post" method="post" enctype="multipart/form-data">
+            <form action="/post" method="post" enctype="multipart/form-data"  autocomplete="off" >
                 @csrf
                 <div>
                     <div class="sell_form_item">
                         <label>Property Title</label><br>
-                        <input type="text" name="title" placeholder="Enter your Property Title" required>
+                        <input type="text" name="title" id="title" placeholder="Enter your Property Title" required>
                     </div>
                     <div>
                         <label>Owner Name</label><br>
@@ -40,22 +40,22 @@
                     </div>
                     <div>
                         <label>Price</label><br>
-                        <input type="text" name="price" placeholder="Enter Property price">
+                        <input type="number" name="price" placeholder="Enter Property price" required>
                     </div>
                     <div>
                         <label>Area</label><br>
-                        <input type="text" name="area" placeholder="Enter Property Area">
+                        <input type="text" name="area" placeholder="Enter Property Area" required>
                     </div>
                     <div>
                         <label>Property Discription</label><br>
-                        <input type="text" name="body" placeholder="Enter your Property Title">
+                        <input type="text" name="body" placeholder="Enter your Property Title" required>
                     </div>
                 </div>
     
                 <div>
                     <div>
                         <label>Property Features</label><br>
-                        <input type="text" name="feature" placeholder="Enter your Property features">
+                        <input type="text" name="feature" placeholder="Enter your Property features" required>
                     </div>
                     <div class="property_item_quantity">
                         <div>
@@ -81,11 +81,11 @@
                     </div>
                     <div>
                         <label>Cover Image</label><br>
-                        <input type="file" name="cover">
+                        <input type="file" name="cover" accept="image/*" required>
                     </div>
                     <div>
                         <label>Other Images</label><br>
-                        <input type="file" name="images[]" multiple>
+                        <input type="file" name="images[]" accept="image/*" required>
                     </div>
                 </div>
     

@@ -5,7 +5,7 @@
     <div class="buy_banner">
         <div>
             <h1>Search for Property Here</h1>
-            <form action="/search">
+            <form action="/search"  autocomplete="off" >
                 <input class="search" name="query" type="text" placeholder="Search By Title or Location"
                     aria-label="Search">
                 <i><button class="btn" type="submit">Search</button></i>
