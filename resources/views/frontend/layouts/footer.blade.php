@@ -58,11 +58,14 @@
     // let garage = document.forms["form"]["garage"].value;
     // let contact = document.forms["form"]["contact"].value;
 
-    function validate() {
-        let x = document.getElementById('title').value;
-        alert(x);
-        return false;
-    }
+    // function validate() {
+    //     if (document.getElementById('title').value.length>5) {
+    //         alert(x);
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // }
 </script>
 </body>
 

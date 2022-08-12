@@ -18,14 +18,16 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\PropertyController;
 use App\Http\Controllers\Backend\UserController;
 
-
+// use App\Http\Controllers\ContactController;
+Route::get('contact', [ContactController::class, 'index']);
+Route::post('contact', [ContactController::class, 'store'])->name('contact.us.store');
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/buy', [BuyController::class, 'index']);
 Route::get('/rent', [RentController::class, 'index']);
 Route::get('/sell', [SellController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
-Route::get('/contact', [ContactController::class, 'index']);
+// Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/policy', [PolicyController::class, 'index']);
 Route::get('/terms', [TermsController::class, 'index']);
 Route::get('/buy/product', [ProductController::class, 'index']);

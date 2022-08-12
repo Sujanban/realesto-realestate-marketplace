@@ -35,7 +35,13 @@ hr{
     box-shadow: inset 30rem 0 0 0 black;
     color: white;
 }
-
+.text-danger{
+    color: red;
+}
+.alert-success{
+    padding: 2rem;
+    background-color: #9bbf9b;
+}
 html {
     /*font-size: 62.5%;*/
     overflow-x: hidden;
