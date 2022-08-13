@@ -30,6 +30,7 @@ class CreatePostsTable extends Migration
             $table->text("kitchen");
             $table->text("garage");
             $table->string("contact");
+            $table->string("status");
             $table->text("cover");
             $table->timestamps();
         });

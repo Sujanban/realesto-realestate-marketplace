@@ -17,6 +17,8 @@
         <h1>Available Properties</h1>
         <div class="card">
             @foreach ($posts as $post)
+            @if ($post->status == 'unpublished')
+            @else
                 <div class="featured_listing_card">
                     <div class="listing_card_image">
                         <a href="/property/{{ $post->slug }}">
@@ -33,6 +35,23 @@
                         <p>Beds: {{ $post->bedroom }} Baths: {{ $post->bathroom }} Garages: {{ $post->garage }} Kitchen: {{ $post->kitchen }}</p>
                     </div>
                 </div>
+            @endif
+                {{-- <div class="featured_listing_card">
+                    <div class="listing_card_image">
+                        <a href="/property/{{ $post->slug }}">
+                            <img src="{{ asset('cover/' . $post->cover) }}">
+                        </a>
+                    </div>
+                    <div class="featured_listing_card_info">
+                        <a href="/property/{{ $post->slug }}">{{ $post->title }}</a>
+                        <hr>
+                        <h3>Price: ${{ $post->price }}</h3>
+                        <hr>
+                        <p>Location: {{ $post->location }}</p>
+                        <p>Area: {{ $post->area }}</p>
+                        <p>Beds: {{ $post->bedroom }} Baths: {{ $post->bathroom }} Garages: {{ $post->garage }} Kitchen: {{ $post->kitchen }}</p>
+                    </div>
+                </div> --}}
             @endforeach
         </div>
     </div>

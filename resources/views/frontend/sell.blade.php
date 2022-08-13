@@ -100,6 +100,13 @@
                     <label>Other Images</label><br>
                     <input type="file" name="images[]" accept="image/*" required>
                 </div>
+                <div>
+                    <label>status</label><br>
+                    {{-- <input type="text" name="status" placeholder="Status" required> --}}
+                    <select name="status">
+                        <option value="unpublished" selected>Request Review</option>
+                    </select>
+                </div>
             </div>
 
 

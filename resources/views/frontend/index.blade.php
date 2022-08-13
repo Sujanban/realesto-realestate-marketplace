@@ -62,6 +62,8 @@
         <h1>Our Featured Listings</h1>
         <div class="card">
             @foreach ($posts as $post)
+            @if ($post->status == 'unpublished')
+            @else
                 <div class="featured_listing_card">
                     <div class="listing_card_image">
                         <a href="/property/{{ $post->slug }}">
@@ -78,6 +80,7 @@
                         <p>Beds: {{ $post->bedroom }} Baths: {{ $post->washroom }} Garages: {{ $post->garage }}</p>
                     </div>
                 </div>
+                @endif
             @endforeach
         </div>
         <div class="featured_btn ">
@@ -106,6 +109,8 @@
         <h1>Other Properties</h1>
         <div class="card">
             @foreach ($posts as $post)
+            @if ($post->status == 'unpublished')
+            @else
                 <div class="featured_listing_card">
                     <div class="listing_card_image">
                         <a href="/property/{{ $post->slug }}">
@@ -122,6 +127,7 @@
                         <p>Beds: {{ $post->bedroom }} Baths: {{ $post->washroom }} Garages: {{ $post->garage }}</p>
                     </div>
                 </div>
+                @endif
             @endforeach
         </div>
         <div class="featured_btn ">

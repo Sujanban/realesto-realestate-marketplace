@@ -34,6 +34,7 @@ class PostController extends Controller
                 "garage" =>$request->garage,
                 "feature" =>$request->feature,
                 "contact" =>$request->contact,
+                "status" =>$request->status,
                 "cover" =>$imageName,
             ]);
            $post->save();
@@ -156,6 +157,7 @@ class PostController extends Controller
                 "garage" =>$request->garage,
                 "feature" =>$request->feature,
                 "contact" =>$request->contact,
+                "status" =>$request->status,
                 "cover" =>$imageName,
             ]);
            $post->save();
@@ -238,6 +240,7 @@ class PostController extends Controller
             "kitchen" =>$request->kitchen,
             "garage" =>$request->garage,
             "contact" =>$request->contact,
+            "status" =>$request->status,
             "cover"=>$post->cover
         ]);
 

@@ -23,6 +23,7 @@ class Post extends Model
         'garage',
         'kitchen',
         'contact',
+        'status',
         'cover',
     ];
 

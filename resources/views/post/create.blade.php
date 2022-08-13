@@ -87,6 +87,14 @@
                         <label>Other Images</label><br>
                         <input type="file" name="images[]" accept="image/*" required>
                     </div>
+                    <div>
+                        <label>status</label><br>
+                        {{-- <input type="text" name="status" placeholder="Status" required> --}}
+                        <select name="status">
+                            <option value="published" selected>Publish</option>
+                            <option value="unpublished" >Draft</option>
+                        </select>
+                    </div>
                 </div>
     
                 <input type="submit" name="submit" class="submit">

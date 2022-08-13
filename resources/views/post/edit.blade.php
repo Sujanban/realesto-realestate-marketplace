@@ -104,6 +104,24 @@
                         <label>Other Images</label><br>
                         <input type="file" name="images[]" accept="image/*" multiple>
                     </div>
+                    {{-- <div>
+                        <label>status</label><br>
+                        <input type="text" name="status" placeholder="Status" value="{{ $posts->status }}" required>
+                    </div> --}}
+                    <div>
+                        <label>Status</label><br>
+                        {{-- <input type="text" name="feature" placeholder="Enter your Property features"
+                            value="{{ $posts->feature }}" required> --}}
+                            <select name="status">
+                                <option value="{{ $posts->status }}">{{ $posts->status }}</option>
+                                {{-- <option value="{{ $posts->status }}">{{ $posts->status }}</option> --}}
+                                @if ($posts->status == "published")
+                                <option value="unpublish">Save Draft</option>
+                                @else
+                                <option value="publish">Publish</option>
+                                @endif
+                            </select>
+                    </div>
                 </div>
 
                 <input type="submit" name="submit" class="submit">
